@@ -17,4 +17,40 @@ export class BoardsComponent {
   faGear = faGear;
   faClock = faClock;
   faTrello = faTrello;
+
+  items = [
+    {
+      label: 'item 1',
+      items: [
+        {
+          label: 'Sub item 1.1'
+        },
+        {
+          label: 'Sub item 1.2'
+        },
+      ],
+    },
+    {
+      label: 'item 2',
+      items: [
+        {
+          label: 'Sub item 2.1'
+        },
+      ],
+    },
+    {
+      label: 'item 3',
+      items: [
+        {
+          label: 'Sub item 3.1'
+        },
+        {
+          label: 'Sub item 3.2'
+        },
+        {
+          label: 'Sub item 3.3'
+        },
+      ],
+    },
+  ]
 }

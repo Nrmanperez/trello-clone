@@ -18,12 +18,17 @@
         >
       </li>
     </ul>
-
     <cdk-accordion>
       <cdk-accordion-item #accordionMenu="cdkAccordionItem">
-        <button class="w-full py-1 px-2 flex justify-between items-center" type="button" (click)="accordionMenu.toggle()">
-          My Workspaces
-          <fa-icon [icon]="accordionMenu.expanded ? faAngleUp : faAngleDown"></fa-icon>
+        <button
+          class="w-full py-1 px-2 flex justify-between items-center"
+          type="button"
+          (click)="accordionMenu.toggle()"
+        >
+          My workspace
+          <fa-icon
+            [icon]="accordionMenu.expanded ? faAngleUp : faAngleDown"
+          ></fa-icon>
         </button>
         <div [style.display]="accordionMenu.expanded ? '' : 'none'">
           <ul class="ml-2 flex flex-col text-sm text-gray-700">
@@ -51,6 +56,27 @@
               <a class="block py-1 px-3"
                 ><fa-icon [icon]="faGear"></fa-icon> Settings</a
               >
+            </li>
+          </ul>
+        </div>
+      </cdk-accordion-item>
+    </cdk-accordion>
+    <cdk-accordion>
+      <cdk-accordion-item
+        #accordionItem="cdkAccordionItem"
+        *ngFor="let item of items"
+      >
+        <button
+          class="w-full text-left"
+          type="button"
+          (click)="accordionItem.toggle()"
+        >
+          {{ item.label }}
+        </button>
+        <div [style.display]="accordionItem.expanded ? '' : 'none'">
+          <ul>
+            <li class="ml-2" *ngFor="let subItem of item.items">
+              {{ subItem.label }}
             </li>
           </ul>
         </div>
