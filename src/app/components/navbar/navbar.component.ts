@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faClose } from '@fortawesome/free-solid-svg-icons';
+import { faClose,faBell, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -8,4 +8,7 @@ import { faClose } from '@fortawesome/free-solid-svg-icons';
 export class NavbarComponent {
   isOpen = false;
   faClose = faClose;
+  faBell = faBell;
+  faInfoCircle = faInfoCircle;
+  isOpenBody = false;
 }
